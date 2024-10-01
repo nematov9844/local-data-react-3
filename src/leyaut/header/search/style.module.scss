@@ -1,0 +1,51 @@
+.all {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    gap: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.311);
+  
+    h1 {
+      font-weight: 600;
+    }
+  
+    .btn, .btns {
+      width: 70px;
+      height: 40px;
+      background-color: gray;
+      border-radius: 25px;
+      position: relative;
+      transition: left 0.8s ease-in;
+      
+      &::after {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 50%;
+        height: 80%;
+        background-color: white;
+        content: "";
+        border-radius: 50%;
+        transition: left 0.5s ease-in, right 0.5s ease-in;
+      }
+    }
+  
+    .btns {
+      background-color: green;
+    }
+  
+    .btns::after {
+      left: auto; 
+      right: 5%;
+    }
+  }
+  
